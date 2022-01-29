@@ -1,0 +1,277 @@
+{
+  "version": 8,
+  "center": [
+    139.76442,
+    35.6875
+  ],
+  "zoom": 13.955760822635057,
+  "bearing": 60,
+  "pitch": 60,
+  "sources": {
+    "satellite": {
+      "type": "raster",
+      "tiles": [
+        "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg"
+      ],
+      "tileSize": 256,
+      "maxzoom": 18,
+      "minzoom": 2,
+      "attribution": "地理院"
+    },
+    "openmaptiles": {
+      "url": "https://tile.openstreetmap.jp/data/japan.json",
+      "type": "vector"
+    },
+    "gsibv-vectortile-source-1-4-16": {
+      "type": "vector",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
+      ],
+      "maxzoom": 16,
+      "minzoom": 4,
+      "attribution": "地理院"
+    },
+    "et10b": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://x.optgeo.org/et10b/et512/{z}/{x}/{y}.webp"
+      ],
+      "tileSize": 512,
+      "maxzoom": 13,
+      "attribution": "地理院"
+    }
+  },
+  "sprite": "https://sprites.geolonia.com/basic",
+  "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": {},
+      "paint": {
+        "background-color": "hsl(222, 56%, 4%)"
+      }
+    },
+    {
+      "id": "satellite",
+      "type": "raster",
+      "source": "satellite",
+      "paint": {
+        "raster-contrast": 0.5,
+        "raster-brightness-max": 0.89,
+        "raster-fade-duration": 500
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 13,
+      "id": "buildings4302",
+      "metadata": {
+        "name": "タンク"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "structurea",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          4302
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(255,230,190)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 6
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 13,
+      "id": "buildings4301",
+      "metadata": {
+        "name": "巨大構造物"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "structurea",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          4301
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(255,230,190)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 60
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 14,
+      "id": "buildings3111",
+      "metadata": {
+        "name": "普通無壁舎"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          3111
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(255,230,190)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 6
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 13,
+      "id": "buildings3112",
+      "metadata": {
+        "name": "堅ろう無壁舎"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          3112
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(230,230,230)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 18
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 14,
+      "id": "buildings3101",
+      "metadata": {
+        "name": "普通建物"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          3101
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(255,230,190)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 6
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 13,
+      "id": "buildings3102",
+      "metadata": {
+        "name": "堅ろう建物"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          3102
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(230,230,230)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 18
+      }
+    },
+    {
+      "source": "gsibv-vectortile-source-1-4-16",
+      "minzoom": 13,
+      "id": "buildings3103",
+      "metadata": {
+        "name": "高層建物"
+      },
+      "type": "fill-extrusion",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "==",
+          "ftCode",
+          3103
+        ],
+        [
+          "==",
+          "$type",
+          "Polygon"
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": "rgb(190,230,255)",
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-height": 60
+      }
+    },
+    {
+      "id": "sky",
+      "type": "sky",
+      "paint": {
+        "sky-type": "atmosphere",
+        "sky-atmosphere-sun": [
+          0,
+          0
+        ],
+        "sky-atmosphere-sun-intensity": 15
+      }
+    }
+  ],
+  "terrain": {
+    "source": "et10b"
+  }
+}

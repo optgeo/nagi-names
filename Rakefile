@@ -1,6 +1,6 @@
 task :build do
   sh <<-EOS
-charites build style.yml docs/style.json
+charites --provider mapbox build style.yml docs/style.json
   EOS
 end
 
