@@ -14,13 +14,10 @@ sources:
     maxzoom: 18
     minzoom: 2
     attribution: 地理院
-  openmaptiles:
-    url: https://tile.openstreetmap.jp/data/japan.json
-    type: vector
   gsibv-vectortile-source-1-4-16:
     type: vector
     tiles:
-      - https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf
+      - https://x.optgeo.org/kagami/zxy/{z}/{x}/{y}.pbf
     maxzoom: 16
     minzoom: 4
     attribution: 地理院
