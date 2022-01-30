@@ -27,7 +27,7 @@ const showMap = async (texts) => {
     container: 'map',
     hash: true,
     style: 'style.json',
-    maxZoom: 19.6,
+    maxZoom: 24,
   })
   map.addControl(new mapgl.NavigationControl())
   map.addControl(new mapgl.ScaleControl({
