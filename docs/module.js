@@ -44,7 +44,47 @@ const showMap = async (texts) => {
     ].includes(v.name)) voice = v
   }
 
+  const DELTA_DISTANCE = 100
+  const DELTA_BEARING = 15
+  const DELTA_PITCH = 5
+  const DELTA_Z = 0.4
+  
+  let easing = t => {
+    return t * (2 - t)
+  }
+
   map.on('load', () => {
+    map.getCanvas().focus()
+    map.getCanvas().addEventListener(
+      'keydown',
+      e => {
+        // e.preventDefault()
+        switch (e.which) {
+          case 87: // w
+            map.zoomTo(map.getZoom() - DELTA_Z, { easing: easing })
+            break
+          case 83: // s
+            map.zoomTo(map.getZoom() + DELTA_Z, { easing: easing })
+            break
+          case 65: // a
+            map.rotateTo(
+              map.getBearing() - DELTA_BEARING, { easing: easing }
+            )
+            break
+          case 68: // d
+            map.rotateTo(
+              map.getBearing() + DELTA_BEARING, { eaasing: easing }
+            )
+            break
+          case 81: // q
+            map.setPitch(map.getPitch() + DELTA_PITCH)
+            break
+          case 90: // z
+            map.setPitch(map.getPitch() - DELTA_PITCH)
+            break
+        }
+      }
+    )
   })
 }
 
