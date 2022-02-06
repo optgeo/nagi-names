@@ -6,7 +6,7 @@ zoom: 13.955760822635057
 bearing: 60
 pitch: 60
 sources:
-  satellite:
+  seamlessphoto:
     type: raster
     tiles:
       - https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg
@@ -28,13 +28,18 @@ sources:
     tileSize: 512
     maxzoom: 13
     attribution: 地理院
+  ise:
+    type: vector
+    tiles:
+      - https://x.optgeo.org/ise/zxy/{z}/{x}/{y}.pbf
+    minzoom: 9
+    maxzoom: 17
+    attribution: 地理院
 sprite: https://sprites.geolonia.com/basic
-glyphs: https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf
+glyphs: https://hfu.github.io/openmaptiles-fonts/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/background.yml
-  - !!inc/file layers/satellite.yml
-#  - !!inc/file layers/water-boundary-bg.yml
-#  - !!inc/file layers/water-boundary.yml
+  - !!inc/file layers/seamlessphoto.yml
   - !!inc/file layers/buildings4302.yml
   - !!inc/file layers/buildings4301.yml
   - !!inc/file layers/buildings3111.yml
@@ -42,15 +47,76 @@ layers:
   - !!inc/file layers/buildings3101.yml
   - !!inc/file layers/buildings3102.yml
   - !!inc/file layers/buildings3103.yml
-#  - !!inc/file layers/road-label-outdoors.yml
-#  - !!inc/file layers/road-intersection.yml
-#  - !!inc/file layers/path-pedestrian-label.yml
-#  - !!inc/file layers/natural-line-label.yml
-#  - !!inc/file layers/natural-point-label.yml
-#  - !!inc/file layers/water-line-label.yml
-#  - !!inc/file layers/water-point-label.yml
-#  - !!inc/file layers/poi-label.yml
-#  - !!inc/file layers/airport-label.yml
+  - !!inc/file layers/m50100-150.yml
+  - !!inc/file layers/m50100-140.yml
+  - !!inc/file layers/m50100-344.yml
+  - !!inc/file layers/m50100-351.yml
+  - !!inc/file layers/m50100-352.yml
+  - !!inc/file layers/m50100-321.yml
+  - !!inc/file layers/m50100-322.yml
+  - !!inc/file layers/m50100-346.yml
+  - !!inc/file layers/m50100-343.yml
+  - !!inc/file layers/m50100-333.yml
+  - !!inc/file layers/m50100-345.yml
+  - !!inc/file layers/m51301.yml
+  - !!inc/file layers/m56376.yml
+  - !!inc/file layers/m100-140.yml
+  - !!inc/file layers/m100-212.yml
+  - !!inc/file layers/m100-314.yml
+  - !!inc/file layers/m100-315.yml
+  - !!inc/file layers/m100-316.yml
+  - !!inc/file layers/m100-333.yml
+  - !!inc/file layers/m100-334.yml
+  - !!inc/file layers/m100-346.yml
+  - !!inc/file layers/m1401.yml
+  - !!inc/file layers/m1402.yml
+  - !!inc/file layers/m1403.yml
+  - !!inc/file layers/m6376.yml
+  - !!inc/file layers/m100-344.yml
+  - !!inc/file layers/m2903.yml
+  - !!inc/file layers/m2904.yml
+  - !!inc/file layers/m100-110.yml
+  - !!inc/file layers/m100-120.yml
+  - !!inc/file layers/m100-210.yml
+  - !!inc/file layers/m100-220.yml
+  - !!inc/file layers/m100-311.yml
+  - !!inc/file layers/m100-312.yml
+  - !!inc/file layers/m100-313.yml
+  - !!inc/file layers/m100-321.yml
+  - !!inc/file layers/m100-322.yml
+  - !!inc/file layers/m100-323.yml
+  - !!inc/file layers/m100-331.yml
+  - !!inc/file layers/m100-332.yml
+  - !!inc/file layers/m100-343.yml
+  - !!inc/file layers/m100-345.yml
+  - !!inc/file layers/m100-347.yml
+  - !!inc/file layers/m100-351.yml
+  - !!inc/file layers/m100-352.yml
+  - !!inc/file layers/m100-353.yml
+  - !!inc/file layers/m100-411.yml
+  - !!inc/file layers/m100-412.yml
+  - !!inc/file layers/m100-421.yml
+  - !!inc/file layers/m100-431.yml
+  - !!inc/file layers/m100-441.yml
+  - !!inc/file layers/m100-531.yml
+  - !!inc/file layers/m100-612.yml
+  - !!inc/file layers/m100-631.yml
+  - !!inc/file layers/m100-651.yml
+  - !!inc/file layers/m100-681.yml
+  - !!inc/file layers/m2901.yml
+  - !!inc/file layers/m2910.yml
+  - !!inc/file layers/m2930.yml
+  - !!inc/file layers/m3207.yml
+  - !!inc/file layers/m3208.yml
+  - !!inc/file layers/m3205.yml
+  - !!inc/file layers/m3206.yml
+  - !!inc/file layers/m3211.yml
+  - !!inc/file layers/m3216.yml
+  - !!inc/file layers/m3218.yml
+  - !!inc/file layers/m3231.yml
+  - !!inc/file layers/m3232.yml
+  - !!inc/file layers/m3243.yml
+  - !!inc/file layers/m6331.yml
   - !!inc/file layers/sky.yml
 terrain:
   source: et10b

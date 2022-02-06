@@ -1,6 +1,6 @@
-id: satellite
+id: seamlessphoto
 type: raster
-source: satellite
+source: seamlessphoto
 paint:
   raster-contrast: 0.5
   raster-brightness-max: 0.89
